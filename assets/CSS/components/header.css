@@ -1,0 +1,183 @@
+header {
+    padding: 1rem;
+    background-color: var(--blackgrey-color);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    min-width:6.5rem;
+    cursor: pointer;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.top-nav ul {
+    display: flex;
+    font-family: "Poppins bold";
+    font-weight: 700;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+}
+
+.top-nav ul li {
+    display: none;
+}
+
+.top-nav ul li a {
+    color: var(--offWhite-color);
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    color: var(--yellow-color);
+}
+
+.burger {
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu-burger__container {
+    display: flex;
+}
+
+.icons-nav {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.icons-nav img:hover {
+    filter: drop-shadow(0 0 0.75rem var(--blackgrey-color));
+}
+
+.search {
+    background-image: url(../../IMG/loupe.svg);
+    background-repeat: no-repeat;
+    background-color: var(--offWhite-color);
+    padding: 0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.search:active,
+.search:focus,
+.search:hover {
+    background-image: none;
+}
+
+.overlay--close {
+    background-color: var(--offWhite-color);
+    height: 100%;
+    max-width: min(30rem, calc(100% - 3rem));
+}
+
+.dialog[open] .burger-nav {
+    animation: slideInLeft 0.3s forwards;
+}
+
+.dialog[closing] .burger-nav {
+    animation: slideOutLeft 0.3s forwards;
+}
+
+.menu-title {
+    background-color: var(--aqua-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.3rem;
+}
+
+.menu-burger__container {
+    padding: 0.2rem; 
+}
+
+.burger-nav {
+    display: flex;
+    align-items: start;
+    justify-content: stretch;
+    padding-top: 1rem;
+}
+
+.burger-nav h2 {
+    background-color: var(--aqua-color);
+    align-self: center;
+}
+
+.burger-nav ul {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins bold";
+    font-weight: 700;
+    gap: 1.3rem;
+    list-style: none;
+}
+
+.burger-nav a {
+    text-decoration: none;
+    color: var(--blackgrey-color);
+}
+
+.burger-nav a:active {
+    color: var(--orange-color);
+}
+
+.burger-nav__btn--close {
+    cursor: pointer;
+}
+
+.burger-nav__btn--close h3 {
+    cursor: pointer;
+    color: var(--blackgrey-color);
+}
+
+/*tablette*/
+@media screen and (min-width: 640px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    #menu-mobile {
+        display: none;
+        height: 0.1rem;
+    }
+    .menu-burger__container {
+        display: none;
+    }
+
+    .top-nav {
+        gap: 1rem;
+    }
+
+    .top-nav ul li {
+        display: flex;
+    }
+
+    .logo {
+        max-width: 80px;
+        transition: 0.25s;
+    }
+
+    .overlay {
+        display: none;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    .header-nav {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

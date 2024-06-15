@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ca-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/theme/fonts.css">
+    <link rel="stylesheet" href="./assets/CSS/theme/animations.css">
+    <link rel="stylesheet" href="./assets/CSS/theme/default.css">
+    <link rel="stylesheet" href="./assets/CSS/components/banner.css">
+    <link rel="stylesheet" href="./assets/CSS/components/dialog.css">
+    <link rel="stylesheet" href="./assets/CSS/components/header.css">
+    <link rel="stylesheet" href="./assets/CSS/components/articles.css">
+    <link rel="stylesheet" href="./assets/CSS/components/footer.css">
+    <link rel="stylesheet" href="./assets/CSS/components/modal.css">
+    <link rel="icon" href="./assets/IMG/favicon.svg">
+    <script src="./assets/JS/app.js" defer></script>
+    <script src="./assets/JS/articles.js" defer></script>
+    <script src="./assets/JS/dialog.js" defer></script>
+    <script src="./assets/JS/modal.js" defer></script>
+    <script src="./assets/JS/search.js" defer></script>
+    <script src="./assets/JS/vue.js" defer></script>
+    <title>Blogue | Accueil</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header-nav">
+            <img class="logo" src="./assets/IMG/logoW.svg" alt="logo">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#">BLOGUE</a></li>
+                    <li><a href="#">RECETTES</a></li>
+                    <li><a href="#">HISTOIRE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+                <button data-dialog="#menu-mobile" type="button" class="menu-burger__container">
+                    <img class="burger" src="./assets/IMG/menu-burger.svg" alt="menu-burger">
+                </button>
+                <div class="icons-nav">
+                    <input class="search" type="text" name="search" id="search">
+                </div>
+            </nav>
+        </section>
+        <div id="menu-mobile" class="dialog header__menu-dialog" aria-role="dialog">
+            <section class="overlay--close">
+                <div class="menu-title">
+                    <h2>Menu</h2>
+                    <button data-dialog="#menu-mobile" class="burger-nav__btn--close">
+                        <h3>X</h3>
+                    </button>
+                </div>
+                <nav class="burger-nav">
+                    <ul>
+                        <li><a href="#">BLOGUE</a></li>
+                        <li><a href="#">RECETTES</a></li>
+                        <li><a href="#">HISTOIRE</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+    <main>
+        <section class="banner__general">
+            <div class="banner">
+                <div class="banner__left">
+                    <div class="banner__left_content">
+                        <h1>Blogue en vacances</h1>
+                        <p>Ce blog est une invitation à ralentir et à apprécier chaque instant, en s'immergeant dans un cadre idyllique et apaisant.</p>
+                        <button class="btn-banner">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="banner__right">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="./assets/IMG/star-only.svg" alt="Étoile de mer"/>
+                        <source media="(min-width: 768px)" srcset="./assets/IMG/star-only.svg" alt="Étoile de mer"/>
+                        <img class="banner__img" src="./assets/IMG/star.svg" alt="Étoile de mer">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="article_general">
+            <div class="blog-header">
+                <h2>Blogue</h2>
+                <div class="blog-text">
+                    <h4 class="counter">Résultats :</span>&nbsp;<span class="result-count">0</span></h4>
+                    <button class="grid-vue btn-vue"><h4 class="btn-text">Changer la vue</h4></button>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-container"></div>
+            </div>
+        </section>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="modal-close"></span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <img class="logo__footer" src="./assets/IMG/logo-seul.svg" alt="logo">
+            <div class="footer__texte">
+                <h3>Eve Cloutier · PMI</h3>
+                <p><time datetime="2024-06-14">14 juin 2024</time></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
