@@ -1,3 +1,4 @@
+/** Tu t'ais compliqué la vie. Seule la classe du container parent peu te permettre de modifier l'affichage de te ton mode.  */
 const inputSearch = document.querySelector('.search');
 const articleList = document.querySelectorAll('.article-list');
 const listVue = document.querySelectorAll('.list-vue');
@@ -26,6 +27,7 @@ inputSearch.addEventListener('input', (e) => {
             card.classList.add('hidden');
         }
     
+        /** Petite erreur d'indentation */
     document.querySelector('.result-count').textContent = matchingCardsCount;
     });
 });
