@@ -68,6 +68,8 @@ class Article {
     }
 }
 
+/** Bonne technique pour la generation du html */
+
 const articles = [
     new Article(
         '../assets/IMG/difficile.jpg',
